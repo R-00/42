@@ -3,3 +3,11 @@ mkdir $(printf "ex%02i " $(seq 01 23))
 > Utilisé pour créer les dossiers du jour 5.
 
 > mkdir $(printf "nomdurepo%02i " $(seq startrange endrange))
+
+#added by Ron
+
+for f in $(seq 00 09); do printf "ex%02i\n" $f; done | xargs mkdir
+
+# ... (sequence X to Y); ... "your_dir_name%02i\n" ...
+# dont forget the '\n' or because you will obtain 1 directory with a concatenation of dir_names : ex01ex02ex03...
+# you can undo this command with the same syntax but replace the 'xargs mkdir' by 'xargs rm -rf' if you want or whatever...
