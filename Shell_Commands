@@ -1,0 +1,5 @@
+mkdir $(printf "ex%02i " $(seq 01 23))
+
+> Utilisé pour créer les dossiers du jour 5.
+
+> mkdir $(printf "nomdurepo%02i " $(seq startrange endrange))
